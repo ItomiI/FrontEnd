@@ -1,0 +1,77 @@
+h4{margin: 10px 20px;}/*para los titulos*/
+.supercontenedor > *{
+    border: 2px solid #381adb;
+}
+.experiencias_img{/*experiencias_img*/
+    max-width: 150px;
+    max-height: 150px;
+    margin-right: 10px;
+}
+.experiencias_p{/*alinea los parrafos de experiencias*/
+    display: flex;
+    height: 150px;
+    align-items: center;
+    max-width: 944px;
+}
+.experiencias_div{
+    padding:3px !important;
+    margin:3px !important;
+}
+.educacion_div{
+    padding:3px !important;
+    margin:3px !important;
+}
+.educacion_img{/*experiencias_img*/
+    max-width: 150px;
+    max-height: 150px;
+    margin-right: 10px;
+}
+.educacion_p{/*alinea los parrafos de experiencias*/
+    display: flex;
+    height: 150px;
+    align-items: center;
+    max-width: 944px;
+}
+.hardsoftskills {
+    flex-wrap:wrap;
+}
+.cuanto0{
+    background:linear-gradient(to right, #41ce93 0%, #fff 1%) no-repeat;
+}
+.cuanto1{
+    background:linear-gradient(to right, #41ce93 10%, #fff 1%) no-repeat;
+}
+.cuanto2{
+    background:linear-gradient(to right, #41ce93 20%, #fff 1%) no-repeat;
+}
+.cuanto3{
+    background:linear-gradient(to right, #41ce93 30%, #fff 1%) no-repeat;
+}
+.cuanto4{
+    background:linear-gradient(to right, #41ce93 40%, #fff 1%) no-repeat;
+}
+.cuanto5{
+    background:linear-gradient(to right, #41ce93 50%, #fff 1%) no-repeat;
+}
+.cuanto6{
+    background:linear-gradient(to right, #41ce93 60%, #fff 1%) no-repeat;
+}
+.cuanto7{
+    background:linear-gradient(to right, #41ce93 70%, #fff 1%) no-repeat;
+}
+.cuanto8{
+    background:linear-gradient(to right, #41ce93 80%, #fff 1%) no-repeat;
+}
+.cuanto9{
+    background:linear-gradient(to right, #41ce93 90%, #fff 1%) no-repeat;
+}
+.cuanto10{
+    background:linear-gradient(to right, #41ce93 100%, #fff 1%) no-repeat;
+}
+.gridd{
+    grid-template-columns: 206px 206px 206px;
+    grid-auto-flow:row;
+}
+.algo{
+    min-height: 200px;
+}

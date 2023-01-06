@@ -1,0 +1,30 @@
+.bgcolor{
+    background-color: #6ba6dd;
+}
+.argpro{
+    font-size: 25px;
+    line-height:60px;
+    height:60px;
+}
+.imgg{
+
+    max-height:60px;
+}
+
+.ww{
+    width: 99vw;
+}
+
+.hola{
+    width: 315px;
+}
+.miformulario{
+    display:flex;
+    min-width: 100px;  
+}
+.miformulario > *{
+    margin: 10px;
+    
+}
+
+
