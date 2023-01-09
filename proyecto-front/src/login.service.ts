@@ -11,29 +11,27 @@ import { Token } from '@angular/compiler';
 
 export class LoginService {
   private URL = "http://localhost/dashboard/Angular/";
-  private token:string;
   constructor(private http: HttpClient, private cookies: CookieService) {
   }
-
+  usuario:string;
   login(login:any): Observable<any> {
     return this.http.post(`${this.URL}Login.php`, JSON.stringify(login));
   }
-  public setToken(token: string) {
-    this.cookies.set("logintoken",token)
+  public setToken(token: string):void {
+    this.cookies.set("login",token)
   }
-  public getToken() {
-    return this.cookies.get("logintoken");
+  public getToken(){
+    return this.cookies.get("login");
   }
-  public checkToken():boolean {
-    if (this.cookies.check("logintoken")) {
-      this.token= this.getToken()
-      return true
-    }else{
-      this.token= "";
-      return false
-    }
+  public checkToken(){
+    return this.cookies.check("login");
   }
-  public dameToken():string {
-    return this.token;
+  public setUsuario(usuario:string):void{
+    this.usuario = usuario;
   }
+  public getUsuario():string{
+    return this.usuario;
+  }
+
+
 }

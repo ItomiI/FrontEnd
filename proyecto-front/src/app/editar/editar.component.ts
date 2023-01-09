@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from 'src/login.service';
+
 
 @Component({
   selector: 'app-editar',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditarComponent implements OnInit {
 
-  constructor() { }
+  loged:boolean;
+  
+  constructor(public userService: LoginService) {
+    this.loged = this.userService.checkToken();
+  }
 
   ngOnInit() {
   }

@@ -9,11 +9,15 @@ import { LoginService } from 'src/login.service';
 export class HeaderComponent implements OnInit {
 
   token:string;
-
+  usuario:string;
   constructor(public userService: LoginService) {
-    this.userService.checkToken();
-    this.token = this.userService.dameToken();
-   }
+    if (this.userService.checkToken()) {
+      this.token = this.userService.getToken();
+      this.usuario = this.userService.getUsuario();
+    }else{
+      this.token ="";
+    }
+  }
 
   ngOnInit() {
   }

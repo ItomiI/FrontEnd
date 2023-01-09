@@ -9,7 +9,7 @@
           <a class="navbar-brand argpro " href="https://www.argentina.gob.ar/economia/conocimiento/argentina-programa" target="_blank">Argentina Programa</a>
         </div>
 
-        <div class="">
+        <div class="" *ngIf="token!=''">
           <a class="navbar-brand" routerLink="/">Home</a>
           <a class="navbar-brand" routerLink="/editar" *ngIf="token!=''">Editar</a>
 
@@ -17,7 +17,7 @@
         </div>
         <div *ngIf="token!='' ; else templateName">
           <div>
-            <p>{{token}}</p>
+            <p>{{usuario}}</p>
           </div>
         </div>
       
