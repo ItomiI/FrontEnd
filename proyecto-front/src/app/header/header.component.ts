@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from 'src/login.service';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  token:string;
+
+  constructor(public userService: LoginService) {
+    this.userService.checkToken();
+    this.token = this.userService.dameToken();
+   }
 
   ngOnInit() {
   }

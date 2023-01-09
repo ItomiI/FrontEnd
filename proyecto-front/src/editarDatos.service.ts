@@ -6,7 +6,7 @@ import {HttpClient, HttpHandler} from '@angular/common/http';
 })
 export class EditarDatosService {
 
-  urlabout:string = "http://localhost:3000/about";
+  //urlabout:string = "http://localhost:3000/about";
   urlExp:string = "http://localhost:3000/experiencias";
   urlEdu:string = "http://localhost:3000/educacion";
   urlPro:string = "http://localhost:3000/proyectos";

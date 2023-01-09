@@ -11,11 +11,23 @@
 
         <div class="">
           <a class="navbar-brand" routerLink="/">Home</a>
-          <a class="navbar-brand" routerLink="/editar">Editar</a>
+          <a class="navbar-brand" routerLink="/editar" *ngIf="token!=''">Editar</a>
+
+
         </div>
-        <div class="m-3">
-          <button class="" routerLink="/login">Login</button>
+        <div *ngIf="token!='' ; else templateName">
+          <div>
+            <p>{{token}}</p>
+          </div>
         </div>
+      
+        <ng-template #templateName>
+          <div class="m-3">
+            <button class="" routerLink="/login">Login</button>
+          </div>
+        </ng-template>
+
+
       </div>
  
     </div> 

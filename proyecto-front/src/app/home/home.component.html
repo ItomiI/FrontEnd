@@ -1,3 +1,5 @@
+<app-header></app-header>
+
 <!--banner-->
 <div class="container-fluid my-4"> 
     <img src="../../assets/images/f_superbaner.jpg"  class="img-fluid" alt="banner">  
@@ -16,7 +18,7 @@
     </div>
 
 <!--experiencias-->
-    <div class="container experiencias">
+    <div class="container experiencias" *ngIf="experiencias.length>0">
         <h4 class="d-block" style="text-align:center">Experiencias</h4>
         <div class="container-fluid " *ngFor="let item of experiencias">
             <h5 class="">{{item.titulo}}</h5>
@@ -28,7 +30,7 @@
     </div>
 
 <!--educacion-->
-    <div class="container educacion">
+    <div class="container educacion" *ngIf="educacion.length>0">
         <h4 class="d-block" style="text-align:center">Educacion</h4>
         <div class="container-fluid " *ngFor="let item of educacion">
             <h5 class="">{{item.titulo}}</h5>
@@ -67,7 +69,7 @@
 <!--proyectos-->
 
 
-    <div class="container proyectos"> 
+    <div class="container proyectos" *ngIf="proyectos.length>0"> 
         <h4 class="d-block" style="text-align:center">Proyectos</h4>
         <div class="d-flex justify-content-around my-4 p-2">
             <div *ngFor="let item of proyectos" >  
