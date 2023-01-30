@@ -16,6 +16,8 @@ import { EducacionComponent } from './Componentes/Educacion/Educacion/Educacion.
 import { EducacionsComponent } from './Componentes/Educacion/Educacions/Educacions.component';
 import { ProyectoComponent } from './Componentes/Proyectos/Proyecto/Proyecto.component';
 import { ProyectosComponent } from './Componentes/Proyectos/Proyectos/Proyectos.component';
+import { AptitudComponent } from './Componentes/Aptitudes/Aptitud/Aptitud.component';
+import { AptitudesComponent } from './Componentes/Aptitudes/Aptitudes/Aptitudes.component';
 
 const appRoutes:Routes=[
   {path:'',component:HomeComponent},
@@ -39,7 +41,9 @@ const appRoutes:Routes=[
       EducacionComponent,
       EducacionsComponent,
       ProyectoComponent,
-      ProyectosComponent
+      ProyectosComponent,
+      AptitudComponent,
+      AptitudesComponent
    ],
   imports: [
     BrowserModule,

@@ -1,0 +1,6 @@
+.gridd{
+    grid-template-columns: 206px 206px 206px;
+    grid-auto-flow:row;
+}
+
+

@@ -12,7 +12,8 @@ export class HomeComponent implements OnInit{
   descripcion:Dato;
   logros:Dato[]=[];
   educacion:Dato[]=[];
-  aptitudes:Dato[]=[];
+  aptitudesH:Dato[]=[];
+  aptitudesS:Dato[]=[];
   proyectos:Dato[]=[];
 
   constructor(private getDatosserv:GetDatosService){}
@@ -35,10 +36,13 @@ for (let j = 0; j < r.length; j++) {
           case "educacion":
             this.educacion.push(a);
             break;
-          case "aptitud":
-            this.aptitudes.push(a);
+          case "aptitudH":
+            this.aptitudesH.push(a);
             break;
-          
+          case "aptitudS":
+            this.aptitudesS.push(a);
+            break;
+            
           default:
             break;
         }

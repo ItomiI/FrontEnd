@@ -1,0 +1,17 @@
+<div class="container d-flex justify-content-around flex-wrap" *ngIf="AptitudesH.length>0 || AptitudesS.length>0 ">
+
+  <div class="" *ngIf="AptitudesH.length>0">
+      <h4 class="d-block" style="text-align:center">Hard Skills</h4>
+      <div class="d-grid gridd" id="softskillcontiner" >
+        <app-Aptitud *ngFor="let item of AptitudesH" [AptitudDato]="item" [Color]="'warning'">  </app-Aptitud>
+    </div>
+  </div>
+
+  <div class="" *ngIf="AptitudesS.length>0">
+      <h4 class="d-block" style="text-align:center">Soft Skills</h4>
+      <div class="d-grid gridd" id="softskillcontiner" >
+          <app-Aptitud *ngFor="let item of AptitudesS" [AptitudDato]="item" [Color]="'secondary'">  </app-Aptitud>
+      </div>
+  </div>
+
+</div>
