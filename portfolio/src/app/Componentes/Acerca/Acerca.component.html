@@ -5,7 +5,7 @@
     <div *ngIf="!editar; else paraeditar" class="m-3">
       <div  class="d-flex flex-md-nowrap flex-wrap justify-content-around p-1">
         <img src="{{AcercaDato.rutaimagen}}" class="">  
-        <div class="d-inline" style="max-width: 1000px;" >{{AcercaDato.texto}}</div>
+        <div class="m-1">{{AcercaDato.texto}}</div>
       </div>
       <button class ="editboton " (click)="toEdit()">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="25" height="25">

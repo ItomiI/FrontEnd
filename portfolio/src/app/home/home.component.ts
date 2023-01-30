@@ -26,16 +26,16 @@ for (let j = 0; j < r.length; j++) {
           case "descrpcion":
             this.descripcion=(a);
             break;
-          case "proyectos":
+          case "proyecto":
             this.proyectos.push(a);
             break;
-          case "logros":
+          case "logro":
               this.logros.push(a);
               break; 
           case "educacion":
             this.educacion.push(a);
             break;
-          case "aptitudes":
+          case "aptitud":
             this.aptitudes.push(a);
             break;
           
