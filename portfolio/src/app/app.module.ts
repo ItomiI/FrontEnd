@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AcercaComponent } from './Componentes/Acerca/Acerca.component';
 import { LogroComponent } from './Componentes/logros/Logro/Logro.component';
 import { LogrosComponent } from './Componentes/logros/Logros/Logros.component';
+import { EducacionComponent } from './Componentes/Educacion/Educacion/Educacion.component';
+import { EducacionsComponent } from './Componentes/Educacion/Educacions/Educacions.component';
 
 const appRoutes:Routes=[
   {path:'',component:HomeComponent},
@@ -31,7 +33,9 @@ const appRoutes:Routes=[
       BannerComponent,
       AcercaComponent,
       LogroComponent,
-      LogrosComponent
+      LogrosComponent,
+      EducacionComponent,
+      EducacionsComponent
    ],
   imports: [
     BrowserModule,
