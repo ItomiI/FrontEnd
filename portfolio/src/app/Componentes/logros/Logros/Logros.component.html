@@ -1,0 +1,11 @@
+<div *ngIf="LogrosDato" class=" container mt-5 test ">
+
+  <h3>Logros</h3>
+
+  <div *ngFor="let item of LogrosDato">
+    <app-Logro [logroDato]="item"></app-Logro>
+  </div>
+
+
+
+</div>

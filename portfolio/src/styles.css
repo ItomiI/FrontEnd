@@ -16,3 +16,8 @@
     background-color: rgb(234, 255, 252);
 
 }
+.imgborde{
+    border: 3px ridge rgba(13,13,74,0.39);
+    background: rgba(27,163,137,0.1);
+    margin: 4px;
+}

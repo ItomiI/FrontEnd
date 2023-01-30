@@ -10,6 +10,8 @@ import { HeaderComponent } from './Componentes/Header/Header.component';
 import { BannerComponent } from './Componentes/Banner/Banner.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AcercaComponent } from './Componentes/Acerca/Acerca.component';
+import { LogroComponent } from './Componentes/logros/Logro/Logro.component';
+import { LogrosComponent } from './Componentes/logros/Logros/Logros.component';
 
 const appRoutes:Routes=[
   {path:'',component:HomeComponent},
@@ -27,7 +29,9 @@ const appRoutes:Routes=[
       HeaderComponent,
       HomeComponent,
       BannerComponent,
-      AcercaComponent
+      AcercaComponent,
+      LogroComponent,
+      LogrosComponent
    ],
   imports: [
     BrowserModule,

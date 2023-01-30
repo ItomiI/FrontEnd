@@ -4,7 +4,9 @@
 
     <div *ngIf="!editar; else paraeditar" class="m-3">
       <div  class="d-flex flex-md-nowrap flex-wrap justify-content-around p-1">
-        <img src="{{AcercaDato.rutaimagen}}" class="">  
+        <div class="imgborde">
+          <img src="{{AcercaDato.rutaimagen}}" class="">  
+        </div>
         <div class="m-1">{{AcercaDato.texto}}</div>
       </div>
       <button class ="editboton " (click)="toEdit()">
