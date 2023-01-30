@@ -9,6 +9,7 @@ import { RegistrarComponent } from './Registrar/Registrar.component';
 import { HeaderComponent } from './Componentes/Header/Header.component';
 import { BannerComponent } from './Componentes/Banner/Banner.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AcercaComponent } from './Componentes/Acerca/Acerca.component';
 
 const appRoutes:Routes=[
   {path:'',component:HomeComponent},
@@ -25,7 +26,8 @@ const appRoutes:Routes=[
       RegistrarComponent,
       HeaderComponent,
       HomeComponent,
-      BannerComponent
+      BannerComponent,
+      AcercaComponent
    ],
   imports: [
     BrowserModule,
