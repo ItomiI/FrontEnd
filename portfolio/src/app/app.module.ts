@@ -8,6 +8,7 @@ import { LoginComponent } from './Login/Login.component';
 import { RegistrarComponent } from './Registrar/Registrar.component';
 import { HeaderComponent } from './Componentes/Header/Header.component';
 import { BannerComponent } from './Componentes/Banner/Banner.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes:Routes=[
   {path:'',component:HomeComponent},
@@ -29,6 +30,7 @@ const appRoutes:Routes=[
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
