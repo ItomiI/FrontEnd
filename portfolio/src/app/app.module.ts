@@ -14,6 +14,8 @@ import { LogroComponent } from './Componentes/logros/Logro/Logro.component';
 import { LogrosComponent } from './Componentes/logros/Logros/Logros.component';
 import { EducacionComponent } from './Componentes/Educacion/Educacion/Educacion.component';
 import { EducacionsComponent } from './Componentes/Educacion/Educacions/Educacions.component';
+import { ProyectoComponent } from './Componentes/Proyectos/Proyecto/Proyecto.component';
+import { ProyectosComponent } from './Componentes/Proyectos/Proyectos/Proyectos.component';
 
 const appRoutes:Routes=[
   {path:'',component:HomeComponent},
@@ -35,7 +37,9 @@ const appRoutes:Routes=[
       LogroComponent,
       LogrosComponent,
       EducacionComponent,
-      EducacionsComponent
+      EducacionsComponent,
+      ProyectoComponent,
+      ProyectosComponent
    ],
   imports: [
     BrowserModule,

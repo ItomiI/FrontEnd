@@ -1,0 +1,14 @@
+<div *ngIf="ProyectosDato" class=" container mt-5 test ">
+
+  <h3>Proyectos</h3>
+
+  <div class="d-flex">
+    <div *ngFor="let item of ProyectosDato" class="">
+      <app-Proyecto [ProyectoDato]="item"></app-Proyecto>
+    </div>
+  
+  </div>
+
+
+
+</div>
