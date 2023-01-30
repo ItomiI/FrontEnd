@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './Login/Login.component';
 import { RegistrarComponent } from './Registrar/Registrar.component';
+import { HeaderComponent } from './Componentes/Header/Header.component';
 
 const appRoutes:Routes=[
   {path:'',component:HomeComponent},
@@ -19,7 +20,9 @@ const appRoutes:Routes=[
   declarations: [		
     AppComponent,
       LoginComponent,
-      RegistrarComponent
+      RegistrarComponent,
+      HeaderComponent,
+      HomeComponent
    ],
   imports: [
     BrowserModule,
