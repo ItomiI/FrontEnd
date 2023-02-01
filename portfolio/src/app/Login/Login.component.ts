@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private loginService:LoginService,private cookies: CookieService,private router: Router) { }
+  constructor(private loginService:LoginService,private router: Router) { }
 
   public miform:FormGroup;
 
@@ -31,9 +31,8 @@ export class LoginComponent implements OnInit {
     
     this.loginService.login(user,pass).subscribe(r=>{
       if(r[0] != null){
-        console.log(r)
-        this.cookies.set("mitoken",r[0].toString());
-        this.cookies.set("nombre",r[1].toString());
+        this.loginService.setCookie("mitoken",r[0].toString());
+        this.loginService.setCookie("nombre",r[1].toString());
         this.router.navigate(['/']);
       }
 
