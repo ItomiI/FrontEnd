@@ -15,7 +15,7 @@ export class AptitudesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.AptitudesH)
+    
   }
 
 }

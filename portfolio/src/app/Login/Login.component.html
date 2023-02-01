@@ -1,4 +1,19 @@
 <app-Header></app-Header>
-<p>
-  Login works!
-</p>
+
+<form [formGroup]="miform" class=" container" style="max-width: 600px;" autocomplete="off" >
+  <!-- Email input -->
+
+  <div class="form-outline mb-4 mt-4">
+    <input type="email" id="form2Example1" class="form-control" formControlName="user" />
+    <label class="form-label" for="form2Example1">Usuario</label>
+  </div>
+
+  <!-- Password input -->
+  <div class="form-outline mb-4">
+    <input type="password" id="form2Example2" class="form-control" formControlName="contra"/>
+    <label class="form-label" for="form2Example2">Contraseña</label>
+  </div>
+  <!-- Submit button -->
+  <button type="button" class="btn btn-primary btn-block mb-4" (click)="hacerLogin()">Sign in</button>
+
+</form>
