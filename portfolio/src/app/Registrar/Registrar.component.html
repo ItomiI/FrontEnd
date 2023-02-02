@@ -1,2 +1,39 @@
 <app-Header></app-Header>
 
+<form [formGroup]="registroForm" class=" container" style="max-width: 600px;" autocomplete="off" (ngSubmit)="onSubmit()" >
+
+    <div class="row mt-4">
+        <div class="col">
+            <label class="form-label" for="achua1">Usuario</label>
+            <input type="text" id="achua1" class="form-control" formControlName="user" required minlength="5" placeholder="5 caracteres minimo"/>
+            <span class="text-danger" *ngIf="(registroForm.controls['user'].touched || submited) && registroForm.controls['user'].errors?.['minlength']">
+                Pone un nombre valido
+            </span>
+         
+        </div>
+
+        
+        <div class="col">
+            <label class="form-label" for="achua3">Contraseña</label>
+            <input type="password" id="achua3" class="form-control" formControlName="contra"  required minlength="8" placeholder="8 caracteres minimo"/>
+            <span class="text-danger" *ngIf="(registroForm.controls['contra'].touched || submited) &&  registroForm.controls['contra'].errors?.['minlength']">
+                Pone una contraseña valida
+            </span>
+        </div>
+     
+    </div>
+ 
+    <div class="row mt-4"> 
+        <div class="col">
+            <label class="form-label" for="achua4">Mail</label>
+            <input type="email" id="achua4" class="form-control" formControlName="mail" required  placeholder="un mail"/>
+            <span class="text-danger" *ngIf="(registroForm.controls['mail'].touched || submited) && (registroForm.controls['mail'].errors?.['required'] || registroForm.controls['mail'].errors?.['email'])">
+                Pone un mail valido
+            </span>
+        </div>
+    </div>  
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4 mt-4" >Sign in</button>
+  
+  </form>
+  

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../servicios/Login.service';
 import { FormControl,FormGroup } from '@angular/forms';
-import { CookieService } from "ngx-cookie-service";
 import { Router } from '@angular/router';
 
 @Component({
