@@ -41,6 +41,9 @@ export class RegistrarComponent implements OnInit {
           console.log("registrado")
           this.router.navigate(['/']);
         }
+        else{
+          alert("nombre en uso")
+        }
         
       })
 
