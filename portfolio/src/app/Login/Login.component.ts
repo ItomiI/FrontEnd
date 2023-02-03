@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   
   }
 
-  hacerLogin(){
+  onSubmit(){
     let user = this.miform.get('user')?.value;
     let pass = this.miform.get('contra')?.value;
     
@@ -33,7 +33,10 @@ export class LoginComponent implements OnInit {
         this.loginService.setCookie("mitoken",r[0].toString());
         this.loginService.setCookie("nombre",r[1].toString());
         this.router.navigate(['/']);
+      }else{
+        alert("usuario o contraseña incorrectos")
       }
+
 
     });
   }

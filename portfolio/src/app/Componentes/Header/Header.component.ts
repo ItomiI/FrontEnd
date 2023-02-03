@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
 
   deslogear(){
     this.login.deslogear();
-    this.router.navigate(['/']);
+    window.location.reload();
   }
 
 }

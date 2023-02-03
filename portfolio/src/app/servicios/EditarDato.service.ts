@@ -9,17 +9,17 @@ import { Dato } from 'src/Interfaces';
 })
 export class EditarDatoService {
 
-  URL:string = "http://localhost:8080/auto/logear";
+  URL:string = "http://localhost:8080/miapi/datos/editar";
 
   constructor(private http:HttpClient,private cookies: CookieService) { }
 
   editar(eldato:Dato):Observable<Dato>{
     let a = this.cookies.get("mitoken");
     let b= {
-      dato:eldato,
-      clave:a
+      clave:a,
+      dato:eldato
+  
     }
-    console.log(b)
     return this.http.put<Dato>(this.URL,b);
   }
 

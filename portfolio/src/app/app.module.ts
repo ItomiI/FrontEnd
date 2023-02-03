@@ -23,6 +23,7 @@ import { AptitudesComponent } from './Componentes/Aptitudes/Aptitudes/Aptitudes.
 
 const appRoutes:Routes=[
   {path:'',component:HomeComponent},
+  {path:'index',redirectTo: ''},
   {path:'login',component:LoginComponent},
   {path:'registrar',component:RegistrarComponent}
 

@@ -9,7 +9,7 @@ import {Observable, observable, of} from 'rxjs';
 })
 export class GetDatosService {
 
-  URL:string="http://localhost:3000/o";
+  URL:string="http://localhost:8080/miapi/datos";
 
 constructor(private http:HttpClient) { }
 

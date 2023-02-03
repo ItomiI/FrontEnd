@@ -5,7 +5,12 @@
 .editboton{
     position: absolute;
     top: -20px;
-    right: -20px;
+    right: 0px;
+}
+.saveboton{
+    position: absolute;
+    top: 20px;
+    right: 0px;
 }
 .editbotoncont{
     position: relative;

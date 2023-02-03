@@ -1,5 +1,7 @@
 import { Component, OnInit,Input  } from '@angular/core';
 import { Dato } from 'src/Interfaces';
+import { EditarDatoService } from 'src/app/servicios/EditarDato.service';
+import { LoginService } from 'src/app/servicios/Login.service';
 
 @Component({
   selector: 'app-Aptitud',
@@ -10,16 +12,23 @@ export class AptitudComponent implements OnInit {
 
   @Input() AptitudDato:Dato;
   @Input() Color:string
+  editable:boolean;
 
-  editar:boolean;
+  logeado:boolean=this.l.logged();
+  constructor(private editador:EditarDatoService,private l:LoginService) {this.editable=false}
 
-  constructor() {this.editar=false}
-
-  ngOnInit() {
+  ngOnInit() { 
   }
 
   toEdit(){
-    this.editar=!this.editar
+    this.editable=!this.editable
   }
 
+  editar(){
+    if(!Number.isNaN(Number(this.AptitudDato.numero))){
+      this.editador.editar(this.AptitudDato).subscribe(r=>{
+        this.editable=false;
+      });
+    }
+  }
 }
