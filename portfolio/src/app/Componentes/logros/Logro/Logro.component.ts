@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Dato } from 'src/Interfaces';
 import { EditarDatoService } from 'src/app/servicios/EditarDato.service';
+import { EliminarDatoService } from 'src/app/servicios/EliminarDato.service';
 import { LoginService } from 'src/app/servicios/Login.service';
 
 @Component({
@@ -10,13 +11,13 @@ import { LoginService } from 'src/app/servicios/Login.service';
 })
 export class LogroComponent implements OnInit {
 
-  @Input() logroDato:Dato;
+  @Input() Dato:Dato;
  
   editable:boolean;
 
   logeado:boolean=this.l.logged();
   
-  constructor(private editador:EditarDatoService,private l:LoginService) {this.editable=false}
+  constructor(private editador:EditarDatoService,private l:LoginService,private elim:EliminarDatoService) {this.editable=false}
 
   ngOnInit() {
   }
@@ -26,10 +27,15 @@ export class LogroComponent implements OnInit {
   }
 
   editar(){
-    this.editador.editar(this.logroDato).subscribe(r=>{
-      console.log(r)
+    this.editador.editar(this.Dato).subscribe(r=>{
       this.editable=false;
     });
-    
+  }
+  eliminar(){
+    if(confirm("seguro que queres eliminar")){
+      this.elim.eliminar(this.Dato.id).subscribe(r=>{
+        this.editable=false;
+      });
+    }
   }
 }

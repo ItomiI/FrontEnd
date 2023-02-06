@@ -1,9 +1,9 @@
 <div class="card text-black mb-5 px-0 col editbotoncont" style="width: 205px;">
-  <div class="card-header text-center bg-{{Color}} " contentEditable={{editable}} [textContent]="AptitudDato.titulo"
-    #titulo (input)="AptitudDato.titulo=titulo.innerText"></div>
-  <div class="card-body cuanto d-flex justify-content-center" style="--numero: {{(AptitudDato.numero*10).toString()}}%">
+  <div class="card-header text-center bg-{{Color}} " contentEditable={{editable}} [textContent]="Dato.titulo"
+    #titulo (input)="Dato.titulo=titulo.innerText"></div>
+  <div class="card-body cuanto d-flex justify-content-center" style="--numero: {{(Dato.numero*10).toString()}}%">
     <h3 class="card-title text-center" type="number" contentEditable={{editable}}
-      [textContent]="AptitudDato.numero.toString()" #numero (input)="AptitudDato.numero=(+numero.innerText)"></h3>
+      [textContent]="Dato.numero.toString()" #numero (input)="Dato.numero=(+numero.innerText)"></h3>
     <h3 class="card-title text-center">/10</h3>
   </div>
   <button class="editboton " (click)="toEdit()" *ngIf="logeado">
@@ -18,6 +18,14 @@
       <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 
     0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 
     32.8-12.5 45.3 0z" />
+    </svg>
+  </button>
+  <button class="elimboton" (click)="eliminar()" *ngIf="editable">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="25" height="25">
+      <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7
+      54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 
+      256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 
+      265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z" />
     </svg>
   </button>
 

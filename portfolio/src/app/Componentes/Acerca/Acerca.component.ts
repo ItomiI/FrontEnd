@@ -10,7 +10,7 @@ import { LoginService } from 'src/app/servicios/Login.service';
 })
 export class AcercaComponent implements OnInit {
  
-  @Input() AcercaDato:Dato;
+  @Input() Dato:Dato;
 
   editable:boolean;
 
@@ -25,7 +25,7 @@ export class AcercaComponent implements OnInit {
   }
 
   editar(){
-    this.editador.editar(this.AcercaDato).subscribe(r=>{
+    this.editador.editar(this.Dato).subscribe(r=>{
       console.log(r)
       this.editable=false;
     });
