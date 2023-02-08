@@ -13,11 +13,13 @@ export class LogroComponent implements OnInit {
 
   @Input() Dato:Dato;
  
-  editable:boolean;
+  editable:boolean=false;
 
   logeado:boolean=this.l.logged();
   
-  constructor(private editador:EditarDatoService,private l:LoginService,private elim:EliminarDatoService) {this.editable=false}
+  constructor(private editador:EditarDatoService,private l:LoginService,private elim:EliminarDatoService) {
+
+  }
 
   ngOnInit() {
   }

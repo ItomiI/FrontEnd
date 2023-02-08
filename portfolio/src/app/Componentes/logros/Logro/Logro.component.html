@@ -6,8 +6,8 @@
     </div>
 
     <div class="m-1"> 
-      <h5>{{Dato.titulo}}</h5>
-      <p>{{Dato.texto}}</p>
+      <h5 contentEditable={{editable}} [textContent]="Dato.titulo" #titulo (input)="Dato.titulo=titulo.innerText">{{Dato.titulo}}</h5>
+      <p contentEditable={{editable}} [textContent]="Dato.texto" #texto (input)="Dato.texto=texto.innerText">{{Dato.texto}}</p>
     </div>
   </div> 
   <button class="editboton " (click)="toEdit()" *ngIf="logeado">

@@ -10,7 +10,7 @@ export class AptitudesComponent implements OnInit {
 
   @Input() AptitudesS:Dato[]
   @Input() AptitudesH:Dato[]
-
+  
 
   constructor() { }
 

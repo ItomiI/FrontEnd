@@ -1,5 +1,5 @@
 export interface Dato{
-    id:number,
+    id:number;
     titulo:string;
     rutaimagen:string;
     texto:string;
@@ -12,4 +12,18 @@ export interface tipodato{
     quetipodato:string;
 }
 
+export class tipodato implements tipodato{
+    id:number=1;
+    quetipodato:string="";
 
+}
+
+export class Dato implements Dato{
+    id:number=0;
+    titulo:string="";
+    rutaimagen:string="";
+    texto:string="";
+    link:string="";
+    numero:number=0;
+    tipodato:tipodato = new tipodato();
+}
