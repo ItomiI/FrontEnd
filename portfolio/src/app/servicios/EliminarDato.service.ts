@@ -17,7 +17,7 @@ export class EliminarDatoService {
   eliminar(id:number):Observable<boolean>{
     var laurl=this.URL + id.toString();
     return this.http.delete<boolean>(laurl);
-    
+     
   }
 
 }
