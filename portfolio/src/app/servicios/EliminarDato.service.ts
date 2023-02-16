@@ -9,18 +9,15 @@ import { Dato } from 'src/Interfaces';
 })
 export class EliminarDatoService {
 
-  URL:string = "http://localhost:8080/miapi/datos/editar";
+  URL:string = "http://localhost:8080/miapi/datos/";
+  log:string = "http://localhost:8080/auto/verif";
 
   constructor(private http:HttpClient,private cookies: CookieService) { }
 
-  eliminar(id:number):Observable<Dato>{
-    let a = this.cookies.get("mitoken");
-    let b= {
-      clave:a,
-      dato:id
-  
-    }
-    return this.http.put<Dato>(this.URL,b);
+  eliminar(id:number):Observable<boolean>{
+    var laurl=this.URL + id.toString();
+    return this.http.delete<boolean>(laurl);
+    
   }
 
 

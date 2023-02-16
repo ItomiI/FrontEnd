@@ -6,7 +6,7 @@
     position: absolute;
     top: -20px;
     right: 0px;
-}
+} 
 .saveboton{
     position: absolute;
     top: 20px;
@@ -35,4 +35,24 @@
     border: 3px ridge rgba(13,13,74,0.39);
     background: rgba(27,163,137,0.1);
     margin: 4px;
+    max-width: 186px;
+
+}
+.imgg{
+
+    max-width: 180px;
+    min-width: 180px;
+    min-height: 180px;
+
+}
+.textareaa{
+    width: 100%;
+    height: 76%; 
+    box-sizing: border-box;
+}
+.nuevodato{
+    position: absolute;
+    top: 0px;
+    left: -50px;
+
 }

@@ -25,5 +25,5 @@ export class Dato implements Dato{
     texto:string="";
     link:string="";
     numero:number=0;
-    tipodato:tipodato = new tipodato();
+    
 }

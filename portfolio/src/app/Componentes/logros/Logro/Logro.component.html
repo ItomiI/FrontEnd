@@ -1,11 +1,11 @@
 <div class="m-3 editbotoncont">
-  <div  class="d-flex flex-md-nowrap flex-wrap justify-content-around p-1">
+  <div  class="d-flex flex-md-nowrap flex-wrap justify-content-start p-1">
     
     <div class="imgborde">
-      <img src="{{Dato.rutaimagen}}" class="">  
+      <img src="{{Dato.rutaimagen}}" class="imgg">  
     </div>
 
-    <div class="m-1"> 
+    <div class="m-1" style="width: 90%;"> 
       <h5 contentEditable={{editable}} [textContent]="Dato.titulo" #titulo (input)="Dato.titulo=titulo.innerText">{{Dato.titulo}}</h5>
       <p contentEditable={{editable}} [textContent]="Dato.texto" #texto (input)="Dato.texto=texto.innerText">{{Dato.texto}}</p>
     </div>
