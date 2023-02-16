@@ -9,15 +9,19 @@ import { LoginService } from 'src/app/servicios/Login.service';
   templateUrl: './Logro.component.html',
   styleUrls: ['./Logro.component.css']
 })
-export class LogroComponent{
+export class LogroComponent implements OnInit {
 
   @Input() Dato:Dato;
  
   editable:boolean=false;
+
   logeado:boolean=this.l.logged();
   
   constructor(private editador:EditarDatoService,private l:LoginService,private elim:EliminarDatoService) {
 
+  }
+
+  ngOnInit() {
   }
 
   toEdit(){
@@ -33,7 +37,6 @@ export class LogroComponent{
     if(confirm("seguro que queres eliminar")){
       this.elim.eliminar(this.Dato.id).subscribe(r=>{
         this.editable=false;
-        window.location.reload();
       });
     }
   }
