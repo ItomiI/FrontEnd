@@ -1,7 +1,7 @@
 
 
 <div class="m-3 editbotoncont">
-  <div class="card imgborde" style="width: 18rem; height: 200px;">
+  <div class="card imgborde" style="width: 19rem; height: 200px;">
     <div class="card-body d-flex flex-column justify-content-between">
       <h5 class="card-title" contentEditable={{editable}} [textContent]="Dato.titulo" #titulo (input)="Dato.titulo=titulo.innerText">{{Dato.titulo}}</h5>
       <p class="card-text" contentEditable={{editable}} [textContent]="Dato.texto" #texto (input)="Dato.texto=texto.innerText">{{Dato.texto}}</p>

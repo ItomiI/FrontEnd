@@ -1,8 +1,8 @@
-<div *ngIf="LogrosDato.length>0" class=" container mt-5 test ">
+<div *ngIf="LogrosDato.length>0" class="editbotoncont container mt-5 test ">
 
 
   <div class="d-flex">
-    <button class="" (click)="newDato()" *ngIf="logeado">
+    <button class="nuevodato" (click)="newDato()" *ngIf="logeado">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="25" height="25">
         <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 
           0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 
@@ -17,13 +17,27 @@
     <app-Logro [Dato]="item"></app-Logro>
   </div>
 
-  <div *ngIf="creado">
+  <div *ngIf="creado" class="editbotoncont">
     <form action="#" >
-      <input #titulo     placeholder="pone un titulo">
-      <input #texto      placeholder="pone un texto">
-      <input #rutaimagen placeholder="pone un ruta de la imagen">
-
-    </form>
+      <div  class="d-flex flex-md-nowrap flex-wrap justify-content-start p-1">
+    
+        <div class="imgborde">
+          <input class="imgg" [(ngModel)]="this.nuevoDato.rutaimagen"> 
+        </div>
+    
+        <div class="m-1" style="width: 90%;"> 
+          <h5><input  [(ngModel)]="this.nuevoDato.titulo"></h5>
+          <textarea  class="textareaa" [(ngModel)]="this.nuevoDato.texto"></textarea>
+        </div>
+      </div> 
+    <button class="saveboton" (click)="guardar()">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="25" height="25">
+        <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 
+        0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 
+        32.8-12.5 45.3 0z" />
+      </svg>
+    </button>
+      </form>
   </div>
 
 </div>
