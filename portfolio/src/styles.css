@@ -1,57 +1,45 @@
-.test >*{
-    border: 1px solid #000;
+.container{
+    border: 3px inset rgb(125, 159, 163);
+    background-color: rgb(239, 247, 245);
+
 }
 
-.editboton{
-    position: absolute;
-    top: -20px;
-    right: 0px;
+.BotonContenedor{
+    position: relative;
 }
-.saveboton{
-    position: absolute;
-    top: 20px;
-    right: 0px;
-}
-.elimboton{
-    position: absolute;
-    top: 60px;
-    right: 0px;
-}
-.newboton{
+.BotonNuevo{/**/
     position: absolute;
     top: -40px;
     left: 0px;
+    z-index: 1000;
 }
-.editbotoncont{
-    position: relative;
-}
-
-.container{
-    border: 10px inset rgb(197, 248, 255);
-    background-color: rgb(234, 255, 252);
-
-}
-.imgborde{
-    border: 3px ridge rgba(13,13,74,0.39);
-    background: rgba(27,163,137,0.1);
-    margin: 4px;
-    max-width: 186px;
-}
-.imgg{
-
-    max-width: 180px;
-    min-width: 180px;
-    min-height: 180px;
-
-}
-.textareaa{
-    width: 100%;
-    height: 76%; 
-    box-sizing: border-box;
-}
-.nuevodato{
+.BotonEditar{
     position: absolute;
-    top: 0px;
-    left: -50px;
+    top: -1px;
+    right: -41px;
+    z-index: 1000;
+}
+.BotonGuardar{
+    position: absolute;
+    top: 41px;
+    right: -41px;
+    z-index: 1000;
+}
+.BotonEliminar{
+    position: absolute;
+    top: 81px;
+    right: -41px;
+    z-index: 1000;
+}
 
+.TituloBorde{
+    border-bottom: 3px ridge rgba(13,13,74,0.39);
+}
+.OcuparTodo{
+    width: 100%;
+}
+
+.TextArea{
+    width: 100%;
+    box-sizing: border-box;
 }

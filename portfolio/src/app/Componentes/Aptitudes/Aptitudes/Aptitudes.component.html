@@ -1,16 +1,52 @@
-<div class="container d-flex justify-content-around flex-wrap" *ngIf="AptitudesH.length>0 || AptitudesS.length>0 ">
+<div class="container d-flex justify-content-around flex-wrap mt-5" *ngIf="AptitudesH.length>0 || AptitudesS.length>0 ">
 
-  <div class="" *ngIf="AptitudesH.length>0">
-      <h4 class="d-block" style="text-align:center">Hard Skills</h4>
-      <div class="d-grid gridd" id="softskillcontiner" >
+  <div class="Contenedor" *ngIf="AptitudesH.length>0">
+      <div class="BotonContenedor">
+        <h4 class="position-relative" style="text-align:center">Hard Skills</h4>
+        <button class="BotonNuevo" (click)="newDatoh()" *ngIf="logeado">
+          <app-Plus></app-Plus>
+        </button>
+      </div>
+     
+      <div class="d-flex flex-wrap">
         <app-Aptitud *ngFor="let item of AptitudesH" [Dato]="item" [Color]="'warning'">  </app-Aptitud>
+
+        <div *ngIf="creadoh" class="card text-black mb-5 px-0 col BotonContenedor"  style="max-width: 205px;">
+          <input class="card-header text-center bg-warning"  name="titulo" [(ngModel)]="this.nuevoDatoh.titulo" placeholder="Titulo">
+          <div class="card-body fondo d-flex justify-content-center" style="--numero: {{(this.nuevoDatoh.numero*10).toString()}}%">
+            <input class="card-title text-center" name="numero" [(ngModel)]="this.nuevoDatoh.numero" placeholder="numero"
+            onkeypress='return event.charCode >= 48 && event.charCode <= 57' >
+          </div>
+          <button class="BotonGuardar" (click)="guardarh()">
+            <app-Save></app-Save>
+          </button>
+        </div>
+
     </div>
   </div>
 
-  <div class="" *ngIf="AptitudesS.length>0">
-      <h4 class="d-block" style="text-align:center">Soft Skills</h4>
-      <div class="d-grid gridd" id="softskillcontiner" >
+  <div class="Contenedor" *ngIf="AptitudesS.length>0">
+
+    <div class="BotonContenedor">
+      <h4 class="position-relative" style="text-align:center">Soft Skills</h4>
+      <button class="BotonNuevo" (click)="newDatos()" *ngIf="logeado">
+        <app-Plus></app-Plus>
+      </button>
+    </div>
+     
+      <div class="d-flex flex-wrap">
           <app-Aptitud *ngFor="let item of AptitudesS" [Dato]="item" [Color]="'secondary'">  </app-Aptitud>
+
+          <div *ngIf="creados" class="card text-black mb-5 px-0 col BotonContenedor"  style="max-width: 205px;">
+            <input class="card-header text-center bg-secondary"  name="titulo" [(ngModel)]="this.nuevoDatos.titulo" placeholder="Titulo">
+            <div class="card-body fondo d-flex justify-content-center" style="--numero: {{(this.nuevoDatos.numero*10).toString()}}%">
+              <input class="card-title text-center" name="numero" [(ngModel)]="this.nuevoDatos.numero" placeholder="numero"
+              onkeypress='return event.charCode >= 48 && event.charCode <= 57' >
+            </div>
+            <button class="BotonGuardar" (click)="guardars()">
+              <app-Save></app-Save>
+            </button>
+          </div>
       </div>
   </div>
 

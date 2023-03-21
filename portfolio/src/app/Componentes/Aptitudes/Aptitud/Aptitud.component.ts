@@ -26,7 +26,10 @@ export class AptitudComponent implements OnInit {
   }
 
   editar(){
-    if(!Number.isNaN(Number(this.Dato.numero))){
+    let n=Number(this.Dato.numero);
+    if(!Number.isNaN(n)){
+      if(n>10)this.Dato.numero=10;
+      if(n<0)this.Dato.numero=0;
       this.editador.editar(this.Dato).subscribe(r=>{
         this.editable=false;
       });
@@ -36,6 +39,7 @@ export class AptitudComponent implements OnInit {
     if(confirm("seguro que queres eliminar")){
       this.elim.eliminar(this.Dato.id).subscribe(r=>{
         this.editable=false;
+        window.location.reload();
       });
     }
   }

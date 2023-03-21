@@ -19,9 +19,7 @@ export class LoginComponent implements OnInit {
     this.miform =new FormGroup({
       user:new FormControl(),
       contra:new FormControl()
-      
     })
-  
   }
 
   onSubmit(){

@@ -1,11 +1,19 @@
 <app-Header></app-Header>
 <app-Banner></app-Banner>
-<app-Acerca [Dato]="descripcion"></app-Acerca>
-<app-Logros [LogrosDato]="logros"></app-Logros>
-<app-Educacions [EducacionsDato]="educacion"></app-Educacions>
-<app-Aptitudes [AptitudesH]="aptitudesH" [AptitudesS]="aptitudesS"> </app-Aptitudes>
-<app-Proyectos  [ProyectosDato]="proyectos"></app-Proyectos>
 
+<div *ngIf="!esperando && !errorr">
 
+    <app-Acerca [Dato]="descripcion"></app-Acerca>
+    <app-Logros [LogrosDato]="logros"></app-Logros>
+    <app-Educacions [EducacionsDato]="educacion"></app-Educacions>
+    <app-Aptitudes [AptitudesH]="aptitudesH" [AptitudesS]="aptitudesS"> </app-Aptitudes>
+    <app-Proyectos  [ProyectosDato]="proyectos"></app-Proyectos>
+    
+</div>
 
-
+<div *ngIf="esperando">
+    <p>Cargando...</p>
+</div>
+<div *ngIf="errorr && !esperando">
+    <p>El server esta apagado o no funciona</p>
+</div>

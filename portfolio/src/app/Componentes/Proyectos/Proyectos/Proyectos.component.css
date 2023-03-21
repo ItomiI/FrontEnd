@@ -1,0 +1,14 @@
+.Foto{
+    border: 3px ridge rgba(13,13,74,0.39);
+    background: rgba(27,163,137,0.1);
+    margin: 4px;
+    width: 270px;
+    height: 250px;
+}
+
+.BotonGuardar{
+    position: absolute;
+    top: 200px;
+    right: 0px;
+    z-index: 1000;
+}

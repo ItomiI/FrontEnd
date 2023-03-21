@@ -1,7 +1,3 @@
-.cuanto{
-    background:linear-gradient(to right, #41ce93 var(--numero,100%), #fff 1%) no-repeat;
-}
-
 :root {
     --n0: 0%;
     --n1: 10%;
@@ -14,4 +10,27 @@
     --n8: 80%;
     --n9: 90%;
     --n10: 100%;
-  }
+}
+
+.Fondo{
+    background:linear-gradient(to right, #41ce93 var(--numero,100%), #fff 1%) no-repeat;
+}
+
+.BotonEditar{
+    position: absolute;
+    top: 81px;
+    right: -10px;
+    z-index: 1000;
+}
+.BotonGuardar{
+    position: absolute;
+    top: 41px;
+    right: -10px;
+    z-index: 1000;
+}
+.BotonEliminar{
+    position: absolute;
+    top: -1px;
+    right: -10px;
+    z-index: 1000;
+}

@@ -24,6 +24,6 @@ export class Dato implements Dato{
     rutaimagen:string="";
     texto:string="";
     link:string="";
-    numero:number=0;
+    numero:number;
     tipodato:tipodato = new tipodato();
 }

@@ -20,15 +20,21 @@ import { ProyectoComponent } from './Componentes/Proyectos/Proyecto/Proyecto.com
 import { ProyectosComponent } from './Componentes/Proyectos/Proyectos/Proyectos.component';
 import { AptitudComponent } from './Componentes/Aptitudes/Aptitud/Aptitud.component';
 import { AptitudesComponent } from './Componentes/Aptitudes/Aptitudes/Aptitudes.component';
+import { ErrorrComponent } from './Errorr/Errorr.component';
+import { PlusComponent } from './Componentes/icons/Plus/Plus.component';
+import { ElimComponent } from './Componentes/icons/Elim/Elim.component';
+import { SaveComponent } from './Componentes/icons/Save/Save.component';
+import { EditComponent } from './Componentes/icons/Edit/Edit.component';
+import { AvionComponent } from './Componentes/icons/Avion/Avion.component';
 
 const appRoutes:Routes=[
-  {path:'',component:HomeComponent},
+  {path: '', component: HomeComponent  },
   {path:'index',redirectTo: ''},
   {path:'login',component:LoginComponent},
-  {path:'registrar',component:RegistrarComponent}
-
+  /*{path:'registrar',component:RegistrarComponent}*/
+  {path: '404', component: ErrorrComponent},
 ];
-
+ 
 
 @NgModule({
   declarations: [		
@@ -46,7 +52,12 @@ const appRoutes:Routes=[
       ProyectoComponent,
       ProyectosComponent,
       AptitudComponent,
-      AptitudesComponent
+      AptitudesComponent,
+      PlusComponent,
+      ElimComponent,
+      SaveComponent,
+      EditComponent,
+      AvionComponent
    ],
   imports: [
     BrowserModule,

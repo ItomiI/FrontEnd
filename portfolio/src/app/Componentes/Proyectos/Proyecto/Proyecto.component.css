@@ -1,0 +1,29 @@
+.Foto{
+    border: 3px ridge rgba(13,13,74,0.39);
+    background: rgba(27,163,137,0.1);
+    margin: 4px;
+    width: 230px;
+    height: 250px;
+}
+.BotonEditar{
+    position: absolute;
+    top: 200px;
+    right: -10px;
+    z-index: 1000;
+}
+.BotonGuardar{
+    position: absolute;
+    top: 200px;
+    right: 40px;
+    z-index: 1000;
+}
+.BotonEliminar{
+    position: absolute;
+    top: 200px;
+    right:90px;
+    z-index: 1000;
+}
+
+.Link{
+    width: 80px;
+}

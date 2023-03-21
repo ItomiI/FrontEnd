@@ -1,0 +1,11 @@
+.PerfilTexto{
+    width: 100%;
+    word-break: break-word;
+}
+.Foto{
+    border: 3px ridge rgba(13,13,74,0.39);
+    background: rgba(27,163,137,0.1);
+    margin: 4px;
+    width: 180px;
+    height: 180px;
+}

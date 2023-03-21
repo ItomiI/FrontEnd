@@ -28,7 +28,7 @@ export class EducacionsComponent implements OnInit {
   }
 
   guardar(){
-    if ( this.nuevoDato.texto=="" && this.nuevoDato.rutaimagen=="" && this.nuevoDato.titulo=="") return;
+    if (this.nuevoDato.texto=="" || this.nuevoDato.titulo=="") return;
     this.nd.enviar(this.nuevoDato,this.EducacionsDato[0].tipodato.id.toString()).subscribe(r=>{
       this.newDato();
     })
