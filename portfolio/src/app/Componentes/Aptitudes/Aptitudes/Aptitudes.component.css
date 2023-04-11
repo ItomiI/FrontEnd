@@ -12,6 +12,11 @@
     --n10: 100%;
 }
 
+.Fondo{
+    background:linear-gradient(to right, #41ce93 var(--numero,100%), #fff 1%) no-repeat;
+    padding: 0 !important;
+}
+
 .BotonNuevo{
     position: absolute;
     top: 0px;
@@ -21,10 +26,6 @@
 
 .Contenedor{
     max-width: 630px;
-}
-
-.Fondo{
-    background:linear-gradient(to right, #41ce93 var(--numero,100%), #fff 1%) no-repeat;
 }
 
 .BotonGuardar{

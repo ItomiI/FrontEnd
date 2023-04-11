@@ -38,7 +38,6 @@ export class RegistrarComponent implements OnInit {
 
       this.rs.registro(user,pass,mail).subscribe(r=>{
         if(r){
-          console.log("registrado")
           this.router.navigate(['/']);
         }
         else{

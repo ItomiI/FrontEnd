@@ -39,7 +39,7 @@
 
           <div *ngIf="creados" class="card text-black mb-5 px-0 col BotonContenedor"  style="max-width: 205px;">
             <input class="card-header text-center bg-secondary"  name="titulo" [(ngModel)]="this.nuevoDatos.titulo" placeholder="Titulo">
-            <div class="card-body fondo d-flex justify-content-center" style="--numero: {{(this.nuevoDatos.numero*10).toString()}}%">
+            <div class="card-body Fondo d-flex justify-content-center" style="--numero: {{(this.nuevoDatos.numero*10).toString()}}%">
               <input class="card-title text-center" name="numero" [(ngModel)]="this.nuevoDatos.numero" placeholder="numero"
               onkeypress='return event.charCode >= 48 && event.charCode <= 57' >
             </div>

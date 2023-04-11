@@ -1,15 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { UrlService } from './url.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RegistrarService {
 
-constructor(private http:HttpClient) { }
+constructor(private http:HttpClient,private url:UrlService) { }
 
-URL:string="http://localhost:8080/auto/registrar";
+URL:string = this.url.URL+"auto/registrar";
 
 
 registro(usuario:string,contra:string,mailnose:string):Observable<boolean>{
@@ -19,7 +20,6 @@ registro(usuario:string,contra:string,mailnose:string):Observable<boolean>{
   a["usuario"]=usuario;
   a["contra"]=contra;
   a["mailnose"]=mailnose;
-  console.log(a)
   return this.http.post<boolean>(this.URL,a);
   
 }

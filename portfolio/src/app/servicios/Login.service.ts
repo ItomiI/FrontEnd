@@ -2,15 +2,16 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CookieService } from "ngx-cookie-service";
+import { UrlService } from './url.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  URL:string = "http://localhost:8080/auto/logear";
+  URL:string = this.url.URL+"auto/logear";
 
-  constructor(private http:HttpClient,private cookies: CookieService) { }
+  constructor(private http:HttpClient,private cookies: CookieService,private url:UrlService) { }
 
   login(usuario:string,contra:string):Observable<String[]>{
     let a= {usuario,contra};

@@ -26,7 +26,6 @@ export class AcercaComponent implements OnInit {
 
   editar(){
     this.editador.editar(this.Dato).subscribe(r=>{
-      console.log(r)
       this.editable=false;
     });
     

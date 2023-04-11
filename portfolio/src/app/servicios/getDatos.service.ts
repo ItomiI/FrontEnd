@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHandler} from '@angular/common/http';
 import { Dato } from '../../Interfaces';
 import {Observable, observable, of} from 'rxjs';
+import { UrlService } from './url.service';
 
 
 @Injectable({
@@ -9,9 +10,9 @@ import {Observable, observable, of} from 'rxjs';
 })
 export class GetDatosService {
 
-  URL:string="http://localhost:8080/miapi/datos";
+  URL:string = this.url.URL+"miapi/datos";
 
-constructor(private http:HttpClient) { }
+constructor(private http:HttpClient,private url:UrlService) { }
 
 getAll():Observable<Dato[]>{
   return this.http.get<Dato[]>(this.URL);
